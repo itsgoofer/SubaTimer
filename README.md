@@ -11,4 +11,7 @@
  - Timer shows days, hours, minutes and seconds
  - Creates a `OBS_TIMER.txt` file on your desktop, which is updated every second. You can then load this file into OBS to use as an overlay to show the actual timer. 
 
-Download for windows [here].(https://github.com/itsgoofer/SubaTimer/releases/download/v2.0.0/SubaTimer-2.0.0-setup.exe)
+
+## Download
+
+Download for Windows [Here](https://github.com/itsgoofer/SubaTimer/releases/download/v2.0.0/SubaTimer-2.0.0-setup.exe).
