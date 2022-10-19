@@ -14,4 +14,4 @@
 
 ## Download
 
-Download for Windows [Here](https://github.com/itsgoofer/SubaTimer/releases/download/v2.0.0/SubaTimer-2.0.0-setup.exe).
+Download the installer for Windows [Here](https://github.com/itsgoofer/SubaTimer/releases/download/v2.0.0/SubaTimer-2.0.0-setup.exe).
