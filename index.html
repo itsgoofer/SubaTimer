@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SubaTimer v2.0</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="app">
+			<h3>Settings</h3>
+			<div>
+				<div class="settings-item">
+					<label>1 Sub Value in Minutes</label>	
+					<input v-model="subsValue" type="text"> 
+				</div>
+
+				<div class="settings-item">
+					<label>1 Bit Value in Seconds </label>
+					<input v-model="bitsValue" type="text"> 
+				</div>
+				
+				<div class="settings-item">
+					<label>1 Dollar Value in Minutes </label>
+					<input v-model="donationValue" type="text"> 
+				</div>
+				
+			</div>
+
+			<div class="timer-section">
+				<h3>Timer</h3>
+				<label>Note: OBS_TIMER file is now saved on your desktop</label>
+				<input v-model="timer" class="countdown"></input> <span v-if="showingNotice">{{notice}}</span>
+				<button class="timer-button" v-if="!isRunning" @click="startTimer">Start Timer</button>
+				<button class="timer-button" v-if="isRunning" @click="stopTimer">Stop Timer</button>
+			</div>
+
+			<div class="time-update">
+				<h3>Update Time</h3>
+				<div class="update-item">
+					<label>Enter Subs</label>
+					<input type="text" v-model="subsToAdd">
+					<div class="update-item-buttons">
+						<button @click="subsReceived('add')">Add To Time</button> <button @click="subsReceived('remove')">Remove From Time</button>
+					</div>
+				</div>
+
+				<div class="update-item">
+					<label>Enter Bits</label>
+					<input type="text" v-model="bitsToAdd">
+					<div class="update-item-buttons">
+						<button @click="bitsReceived('add')">Add To Time</button> <button @click="bitsReceived('remove')">Remove From Time</button>
+					</div>
+				</div>
+
+				<div class="update-item">
+					<label>Enter Donation Amount</label>
+					<input type="text" v-model="donationsToAdd">
+					<div class="update-item-buttons">
+						<button @click="bucksReceived('add')">Add To Time</button> <button @click="bucksReceived('remove')">Remove From Time</button>
+					</div>
+				</div>
+
+			</div>
+			<footer>Made with ❤️ by Goofer</footer>
+		</div>
+
+		<script src="scripts/vue.global.js"></script>
+		<script src="scripts/moment.min.js"></script>
+		<script src="timer.js"></script>
+	</body>
+</html>

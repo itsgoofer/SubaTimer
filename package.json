@@ -1,0 +1,21 @@
+{
+	"name": "SubaTimer",
+	"version": "2.0.0",
+	"main": "main.js",
+	"author": "Goofer",
+	"license": "MIT",
+	"description": "A timer app for Subathons",
+	"scripts": {
+		"start": "electron .",
+		"build": "npx electron-packager . SubaTimer --platform win32 --arch x64 --out dist/ --icon=./resources/Icon.ico",
+		"installer": "electron-installer-windows --src dist/SubaTimer-win32-x64/ --config config.json"
+	},
+	"devDependencies": {
+		"electron": "^19.0.8",
+		"electron-packager": "^15.5.1"
+	},
+	"dependencies": {
+		"electron-installer-windows": "^3.0.0",
+		"electron-squirrel-startup": "^1.0.0"
+	}
+}
