@@ -1,8 +1,8 @@
 ## SubaTimer
-**SubaTimer** is a little Windows utility that makes easy bla bla bla.
+**SubaTimer** helps you add/remove time to your subathon in realtime and calculates remaining time automatically when you receive subs, bits and donations.
 
 
-![enter image description here](https://github.com/itsgoofer/SubaTimer/raw/main/app-screenshot.png)
+![Screenshot](https://github.com/itsgoofer/SubaTimer/raw/main/app-screenshot.png)
 
 ### Features:
 
