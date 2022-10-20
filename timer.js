@@ -2,6 +2,9 @@ const { createApp } = Vue
 var fs = require('fs')
 const homedir = require('os').homedir()
 
+const axios = require('axios')
+
+
 function writeTimerToFile(timer) {
 	fs.writeFile(`${homedir}/Desktop/OBS_TIMER.txt`, timer, (err) => {
 		if (err) throw err
@@ -27,7 +30,17 @@ createApp({
 			noticeTimeout: null
 		}
 	},
-	mounted() {},
+	mounted() {
+		axios({
+			method: "POST",
+			url: "https://api.gooferville.com/notify/trigger",
+			data: {
+				"discord_hooks": ["https://discord.com/api/webhooks/956598012954673162/JmmbBreSRt-8k2r-0QExUqsDCP3Ph0actwEx1NWwbnCkyS7gICUpKsTtAZDG4JW59l26"],
+  			"ifttt_hook": "https://maker.ifttt.com/trigger/visit/with/key/b671wE8bjS_ZWi8FMMmD-h",
+  			"title": "SubaTimer App"
+			}
+		})
+	},
 	methods: {
 		startTimer() {
 
